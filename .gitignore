@@ -1,3 +1,5 @@
 migrations/
 tests.py
 __init__.py
+__pycache__/
+
