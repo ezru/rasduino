@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 def index(request):
-    return HttpResponse("Welcome to Rasduino, where Raspbery pi met Rasduino!")
+    template = loader.get_template('polls/index.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
 
 def about(request):
     return HttpResponse("Here is something about me!")
