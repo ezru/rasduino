@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from django.template import loader
 
 def index(request):
-    template = loader.get_template('polls/index.html')
+    template = loader.get_template('rasduino/index.html')
     context = {}
-    return HttpResponse(template.render(context, request))
+    return  HttpResponse(template.render(context, request))
 
 def about(request):
     return HttpResponse("Here is something about me!")
